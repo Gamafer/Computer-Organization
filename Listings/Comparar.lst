@@ -1,0 +1,65 @@
+A51 MACRO ASSEMBLER  COMPARAR                                                             02/19/2019 15:50:20 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\Comparar.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE Comparar.a51 SET(SMALL) DEBUG PRINT(.\Listings\Comparar.lst) OBJECT(.\O
+                      bjects\Comparar.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+----                   1     CSEG at 00
+0000 2100              2             JMP main
+                       3             
+----                   4             DSEG AT 30H
+0030                   5                     x: DS 1
+0031                   6                     y: DS 1
+                       7                     
+----                   8             CSEG at 100H
+                       9                     
+0100                  10                     main: 
+0100 E590             11                             MOV A, P1
+0102 70FC             12                             JNZ main
+                      13                     
+0104 753003           14                             mov x, #3
+0107 753104           15                             mov y, #4
+                      16                             
+010A B53104           17                             CJNE A, y, mayor
+010D D2B0             18                             setb p3.0
+010F 80EF             19                             jmp main
+                      20                             
+0111                  21                     mayor:
+                      22     
+0111 4004             23                             JC menor
+0113 D2B1             24                             setb p3.1
+0115 80E9             25                             jmp main
+                      26                             
+0117                  27                     menor:
+0117 D2B2             28                             setb p3.2
+0119 80E5             29                             jmp main
+                      30                             
+                      31                             END
+                                                     
+                                                     
+                                                     
+A51 MACRO ASSEMBLER  COMPARAR                                                             02/19/2019 15:50:20 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+MAIN . . . . . . .  C ADDR   0100H   A   
+MAYOR. . . . . . .  C ADDR   0111H   A   
+MENOR. . . . . . .  C ADDR   0117H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+P3 . . . . . . . .  D ADDR   00B0H   A   
+X. . . . . . . . .  D ADDR   0030H   A   
+Y. . . . . . . . .  D ADDR   0031H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

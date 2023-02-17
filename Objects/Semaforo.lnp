@@ -1,0 +1,3 @@
+".\Objects\Semaforo.obj" 
+TO ".\Objects\Semaforo" 
+PRINT(".\Listings\Semaforo.m51") RAMSIZE(256) 

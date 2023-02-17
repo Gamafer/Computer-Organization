@@ -1,0 +1,65 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    02/13/2019  09:22:20  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\Saltos.obj TO .\Objects\Salto PRINT (.\Listings\Salto.m51) RAMSIZE (256)
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\Saltos.obj (SALTOS)
+
+
+LINK MAP OF MODULE:  .\Objects\Salto (SALTOS)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+                    0008H     0028H                  *** GAP ***
+            DATA    0030H     0004H     ABSOLUTE     
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0002H     ABSOLUTE     
+                    0002H     00FEH                  *** GAP ***
+            CODE    0100H     001AH     ABSOLUTE     
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\Salto (SALTOS)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        SALTOS
+  D:0031H         SYMBOL        CONT1
+  D:0032H         SYMBOL        CONT2
+  D:0033H         SYMBOL        CONT3
+  C:0100H         SYMBOL        MAIN
+  C:010FH         SYMBOL        OTRO
+  D:0090H         SYMBOL        P1
+  D:00B0H         SYMBOL        P3
+  D:0030H         SYMBOL        VARIABLE1
+  C:0000H         LINE#         2
+  C:0100H         LINE#         12
+  C:0102H         LINE#         13
+  C:0104H         LINE#         14
+  C:0106H         LINE#         16
+  C:0109H         LINE#         17
+  C:010CH         LINE#         18
+  C:010FH         LINE#         20
+  C:0112H         LINE#         21
+  C:0115H         LINE#         22
+  C:0118H         LINE#         24
+  -------         ENDMOD        SALTOS
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 001CH BYTE ( 1%) *
+******************************************************************************
+
+Program Size: data=12.0 xdata=0 code=28
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  02/13/2019  09:22:20  PAGE 2
+
+
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

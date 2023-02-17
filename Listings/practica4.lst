@@ -1,0 +1,129 @@
+A51 MACRO ASSEMBLER  PRACTICA4                                                            04/09/2019 15:32:38 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\practica4.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE practica4.a51 SET(SMALL) DEBUG PRINT(.\Listings\practica4.lst) OBJECT(.
+                      \Objects\practica4.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+----                   1     CSEG at 0000
+0000 2100              2             JMP MAIN
+                       3             
+----                   4     CSEG at 03H
+0003 214B              5             JMP EXT0
+                       6             
+----                   7     CSEG at 13H
+0013 2152              8             JMP EXT1
+                       9             
+----                  10             DSEG AT 30H
+0030                  11                     val1: ds 1
+0031                  12                     cont1: ds 1
+0032                  13                     cont2: ds 1
+0033                  14                     cont3: ds 1
+0034                  15                     cont4: ds 1
+0035                  16                     lim: ds 1
+                      17                     
+                      18     
+----                  19     CSEG at 0100H
+                      20             
+0100                  21             MAIN:
+0100 75B804           22                     MOV IP, #00000100b
+0103 75A805           23                     MOV IE, #00000101b
+0106 758805           24                     MOV TCON, #00000101b
+0109 D2AF             25                     SETB EA
+                      26                     
+010B                  27             LOOP:
+010B 75350A           28                     MOV lim, #10d
+010E 753000           29                     MOV val1, #0d
+0111                  30             LOOP1:
+0111 E530             31                     mov A,val1
+0113 900122           32                     MOV DPTR, #Tabla
+0116 93               33                     MOVC a,@A+DPTR
+0117 F590             34                     MOV P1,A
+0119 3132             35                     CALL DELAY1S
+011B 0530             36                     INC val1
+011D D535F1           37                     DJNZ lim, LOOP1
+                      38                     
+0120 80E9             39                     Jmp LOOP
+                      40                     
+0122                  41             Tabla:
+0122 02               42                DB 00000010b
+0123 9E               43                DB 10011110b
+0124 24               44                DB 00100100b
+0125 0C               45                DB 00001100b
+0126 98               46                DB 10011000b
+0127 48               47                DB 01001000b
+0128 40               48                DB 01000000b
+0129 1E               49                DB 00011110b
+012A 00               50                DB 00000000b
+012B 18               51                DB 00011000b
+012C 10               52                DB 00010000b
+012D C0               53                DB 11000000b
+012E 62               54                DB 01100010b
+012F 84               55                DB 10000100b
+0130 60               56                DB 01100000b
+0131 70               57                DB 01110000b
+A51 MACRO ASSEMBLER  PRACTICA4                                                            04/09/2019 15:32:38 PAGE     2
+
+                      58                        
+0132                  59             DELAY1s:
+0132 753101           60                             mov cont1, #1d
+0135 753214           61                             mov cont2, #20d
+0138 753300           62                             mov cont3, #0d
+013B 7534BB           63                             mov cont4, #187d
+                      64                             
+013E D534FD           65             et2:    DJNZ cont4, et2
+0141 D533FA           66                             DJNZ cont3,et2
+0144 D532F7           67                             DJNZ cont2,et2
+0147 D531F4           68                             DJNZ cont1, et2
+                      69                             
+014A 22               70                     RET
+                      71                     
+014B                  72     EXT0:
+014B 753000           73             MOV val1, #0d
+014E 75350A           74             MOV lim, #10d
+0151 32               75             RETI
+                      76             
+0152                  77     EXT1:
+0152 80FE             78             jmp EXT1
+0154 32               79             RETI
+                      80     END
+                                     
+                                                
+                                                
+                                                
+A51 MACRO ASSEMBLER  PRACTICA4                                                            04/09/2019 15:32:38 PAGE     3
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+CONT1. . . . . . .  D ADDR   0031H   A   
+CONT2. . . . . . .  D ADDR   0032H   A   
+CONT3. . . . . . .  D ADDR   0033H   A   
+CONT4. . . . . . .  D ADDR   0034H   A   
+DELAY1S. . . . . .  C ADDR   0132H   A   
+EA . . . . . . . .  B ADDR   00A8H.7 A   
+ET2. . . . . . . .  C ADDR   013EH   A   
+EXT0 . . . . . . .  C ADDR   014BH   A   
+EXT1 . . . . . . .  C ADDR   0152H   A   
+IE . . . . . . . .  D ADDR   00A8H   A   
+IP . . . . . . . .  D ADDR   00B8H   A   
+LIM. . . . . . . .  D ADDR   0035H   A   
+LOOP . . . . . . .  C ADDR   010BH   A   
+LOOP1. . . . . . .  C ADDR   0111H   A   
+MAIN . . . . . . .  C ADDR   0100H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+TABLA. . . . . . .  C ADDR   0122H   A   
+TCON . . . . . . .  D ADDR   0088H   A   
+VAL1 . . . . . . .  D ADDR   0030H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

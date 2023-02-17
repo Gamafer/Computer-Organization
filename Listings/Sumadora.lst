@@ -1,0 +1,70 @@
+A51 MACRO ASSEMBLER  SUMADORA                                                             03/20/2019 12:43:55 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\Sumadora.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE Sumadora.a51 SET(SMALL) DEBUG PRINT(.\Listings\Sumadora.lst) OBJECT(.\O
+                      bjects\Sumadora.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+----                   1     CSEG at 00
+0000 2100              2     Jmp main
+                       3     
+----                   4     DSEG at 30H
+0030                   5      variable1: DS 2
+0032                   6      variable2: DS 2
+                       7     
+                       8     
+----                   9     CSEG at 100H
+                      10      
+0100                  11     main:
+0100 E590             12      MOV A, P1
+0102 F530             13      MOV variable1, A
+0104 533003           14      ANL variable1, #00000011b
+0107 E5A0             15      MOV A, P2
+0109 5403             16      ANL A, #00000011b
+010B 2530             17      ADD A, variable1
+010D F532             18      MOV variable2, A
+010F 5404             19      ANL A, #00000100b
+0111 7010             20      JNZ Overflow
+0113 E532             21      MOV A,variable2
+0115 5403             22      ANL A, #00000011b
+0117 90011F           23      Mov DPTR, #Tabla
+011A 93               24      Movc A, @A+DPTR
+011B F5B0             25      MOV P3,A
+                      26      
+011D 80E1             27      Jmp main
+                      28      
+011F                  29     Tabla:
+011F 02               30      DB 00000010b
+0120 9E               31      DB 10011110b
+0121 24               32      DB 00100100b
+0122 0C               33      DB 00001100b
+0123                  34     Overflow:
+                      35     
+0123 75B060           36      Mov P3,#01100000b
+0126 80D8             37      jmp main 
+                      38     END
+A51 MACRO ASSEMBLER  SUMADORA                                                             03/20/2019 12:43:55 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+MAIN . . . . . . .  C ADDR   0100H   A   
+OVERFLOW . . . . .  C ADDR   0123H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+P2 . . . . . . . .  D ADDR   00A0H   A   
+P3 . . . . . . . .  D ADDR   00B0H   A   
+TABLA. . . . . . .  C ADDR   011FH   A   
+VARIABLE1. . . . .  D ADDR   0030H   A   
+VARIABLE2. . . . .  D ADDR   0032H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

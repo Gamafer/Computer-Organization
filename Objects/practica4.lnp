@@ -1,0 +1,3 @@
+".\Objects\practica4.obj" 
+TO ".\Objects\practica4" 
+PRINT(".\Listings\practica4.m51") RAMSIZE(256) 

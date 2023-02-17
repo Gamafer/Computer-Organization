@@ -1,0 +1,40 @@
+A51 MACRO ASSEMBLER  PRUEBA2                                                              02/01/2019 16:02:58 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\Prueba2.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE Prueba2.a51 SET(SMALL) DEBUG PRINT(.\Listings\Prueba2.lst) OBJECT(.\Obj
+                      ects\Prueba2.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+----                   1             CSEG AT 0000
+0000 8000              2                     JMP MAIN
+                       3                     
+0002                   4                     MAIN: 
+0002 EF                5                             MOV A, R7;Registro
+0003 AB30              6                             MOV R3, 30H;Directa
+0005 7B30              7                             MOV R3, #30H;Inmediata
+                       8                             ;MOV A, A 
+0007 853040            9                             MOV 40H,30H;Directa directa
+000A 75500A           10                             MOV 50H,#10;Directa con Inmediata
+                      11                             ;MOV R0, R7 
+000D F520             12                             MOV 20H, A;Directa con acumulador
+000F E525             13                             MOV A,25H;Acumulador con directa
+0011 7425             14                             MOV A, #25H;Acumulador con inmediata
+                      15                     END
+A51 MACRO ASSEMBLER  PRUEBA2                                                              02/01/2019 16:02:58 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+MAIN . . . . . . .  C ADDR   0002H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

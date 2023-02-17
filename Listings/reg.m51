@@ -1,0 +1,116 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    04/12/2019  15:56:22  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\reg.obj TO .\Objects\reg PRINT (.\Listings\reg.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\reg.obj (REG)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  .\Objects\reg (REG)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0015H     UNIT         ?DT?REG
+            IDATA   001DH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0003H     ABSOLUTE     
+                    0006H     0005H                  *** GAP ***
+            CODE    000BH     0003H     ABSOLUTE     
+                    000EH     07F2H                  *** GAP ***
+            CODE    0800H     008CH     UNIT         ?C_C51STARTUP
+            CODE    088CH     002BH     UNIT         ?PR?MAIN?REG
+            CODE    08B7H     0017H     UNIT         ?C_INITSEG
+            CODE    08CEH     000FH     UNIT         ?PR?DELAYS?REG
+            CODE    08DDH     0004H     UNIT         ?PR?INTERRUPCION1?REG
+            CODE    08E1H     0004H     UNIT         ?PR?INTERRUPCION2?REG
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\reg (REG)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?REG
+  +--> ?C_INITSEG
+
+?PR?MAIN?REG
+  +--> ?PR?DELAYS?REG
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\reg (REG)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  04/12/2019  15:56:22  PAGE 2
+
+
+
+  -------         MODULE        REG
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  C:08CEH         PUBLIC        delays
+  B:00A8H.7       PUBLIC        EA
+  D:00A8H         PUBLIC        IE
+  D:0008H         PUBLIC        vector
+  C:088CH         PUBLIC        main
+  D:0088H         PUBLIC        TCON
+  C:08DDH         PUBLIC        interrupcion1
+  C:08E1H         PUBLIC        interrupcion2
+  D:001CH         PUBLIC        i
+  -------         PROC          INTERRUPCION1
+  C:08DDH         LINE#         12
+  C:08DDH         LINE#         13
+  C:08E0H         LINE#         14
+  -------         ENDPROC       INTERRUPCION1
+  -------         PROC          INTERRUPCION2
+  C:08E1H         LINE#         16
+  C:08E1H         LINE#         17
+  C:08E4H         LINE#         18
+  -------         ENDPROC       INTERRUPCION2
+  -------         PROC          MAIN
+  C:088CH         LINE#         23
+  C:088CH         LINE#         24
+  C:088CH         LINE#         25
+  C:088FH         LINE#         26
+  C:0892H         LINE#         27
+  C:0894H         LINE#         28
+  C:0897H         LINE#         29
+  C:0897H         LINE#         30
+  C:08A5H         LINE#         31
+  C:08B0H         LINE#         32
+  C:08B3H         LINE#         33
+  -------         ENDPROC       MAIN
+  -------         PROC          DELAYS
+  -------         DO            
+  D:0006H         SYMBOL        x
+  -------         ENDDO         
+  C:08CEH         LINE#         38
+  C:08CEH         LINE#         40
+  C:08DCH         LINE#         41
+  -------         ENDPROC       DELAYS
+  -------         ENDMOD        REG
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 005EH BYTE ( 4%) *
+******************************************************************************
+
+Program Size: data=30.0 xdata=0 code=238
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

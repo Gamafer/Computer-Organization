@@ -1,0 +1,72 @@
+A51 MACRO ASSEMBLER  SUBRUTINAS                                                           02/22/2019 15:43:27 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\Subrutinas.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE Subrutinas.a51 SET(SMALL) DEBUG PRINT(.\Listings\Subrutinas.lst) OBJECT
+                      (.\Objects\Subrutinas.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+----                   1             CSEG AT 00
+0000 2100              2                     JMP main
+                       3             
+----                   4             Dseg at 30H
+0030                   5                     variable1: DS 1
+0031                   6                     cont1: DS 1
+0032                   7                     cont2: DS 1
+0033                   8                     cont3: DS 1
+                       9             
+----                  10             CSEG AT 100H
+                      11                     
+0100 E590             12             main: mov A, P1
+0102 F5B0             13                     mov P3, A
+0104 70FA             14                     JNZ main
+                      15                     
+0106 3110             16                     call delay1s
+0108 4013             17                     JC otro
+010A D0D0             18                     pop psw
+010C D0E0             19                     pop acc
+                      20                     
+010E 80F0             21             jmp main
+                      22             
+0110                  23             delay1s:
+0110 C0D0             24                     push psw
+0112 C0E0             25                     push acc
+0114 753109           26                     MOV cont1, #9
+0117 753208           27                     MOV cont2, #8
+011A 7533EC           28                     MOV cont3, #236
+011D                  29             otro: 
+011D D533FD           30                     DJNZ cont3, otro
+0120 D532FA           31                     DJNZ cont2, otro
+0123 D531F7           32                     DJNZ cont1, otro
+                      33                     
+0126 22               34                     RET
+                      35                     
+                      36                     
+                      37                     END
+A51 MACRO ASSEMBLER  SUBRUTINAS                                                           02/22/2019 15:43:27 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+ACC. . . . . . . .  D ADDR   00E0H   A   
+CONT1. . . . . . .  D ADDR   0031H   A   
+CONT2. . . . . . .  D ADDR   0032H   A   
+CONT3. . . . . . .  D ADDR   0033H   A   
+DELAY1S. . . . . .  C ADDR   0110H   A   
+MAIN . . . . . . .  C ADDR   0100H   A   
+OTRO . . . . . . .  C ADDR   011DH   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+P3 . . . . . . . .  D ADDR   00B0H   A   
+PSW. . . . . . . .  D ADDR   00D0H   A   
+VARIABLE1. . . . .  D ADDR   0030H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

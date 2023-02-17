@@ -1,0 +1,3 @@
+".\Objects\Sumadora.obj" 
+TO ".\Objects\Sumadora" 
+PRINT(".\Listings\Sumadora.m51") RAMSIZE(256) 

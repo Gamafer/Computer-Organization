@@ -1,0 +1,3 @@
+".\Objects\actividadInterrupciones.obj" 
+TO ".\Objects\actividadInterrupciones" 
+PRINT(".\Listings\actividadInterrupciones.m51") RAMSIZE(256) 

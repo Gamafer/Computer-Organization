@@ -1,0 +1,53 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    03/06/2019  09:59:48  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\DireccionamientoIndirecto1.obj TO .\Objects\DireccionamientoIndirecto1 PRINT (.\Li
+>> stings\DireccionamientoIndirecto1.m51) RAMSIZE (256)
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\DireccionamientoIndirecto1.obj (DIRECCIONAMIENTOINDIRECTO1)
+
+
+LINK MAP OF MODULE:  .\Objects\DireccionamientoIndirecto1 (DIRECCIONAMIENTOINDIRECTO1)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0002H     ABSOLUTE     
+                    0002H     00FEH                  *** GAP ***
+            CODE    0100H     001CH     ABSOLUTE     
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\DireccionamientoIndirecto1 (DIRECCIONAMIENTOINDIRECTO1)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        DIRECCIONAMIENTOINDIRECTO1
+  C:0100H         SYMBOL        MAIN
+  D:0090H         SYMBOL        P1
+  D:00B0H         SYMBOL        P3
+  C:010CH         SYMBOL        TABLA
+  C:0000H         LINE#         2
+  C:0100H         LINE#         6
+  C:0102H         LINE#         7
+  C:0104H         LINE#         8
+  C:0107H         LINE#         9
+  C:0108H         LINE#         10
+  C:010AH         LINE#         12
+  -------         ENDMOD        DIRECCIONAMIENTOINDIRECTO1
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 001EH BYTE ( 1%) *
+******************************************************************************
+
+Program Size: data=8.0 xdata=0 code=30
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

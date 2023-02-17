@@ -1,0 +1,72 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    03/20/2019  12:43:55  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\Sumadora.obj TO .\Objects\Sumadora PRINT (.\Listings\Sumadora.m51) RAMSIZE (256)
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\Sumadora.obj (SUMADORA)
+
+
+LINK MAP OF MODULE:  .\Objects\Sumadora (SUMADORA)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+                    0008H     0028H                  *** GAP ***
+            DATA    0030H     0004H     ABSOLUTE     
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0002H     ABSOLUTE     
+                    0002H     00FEH                  *** GAP ***
+            CODE    0100H     0028H     ABSOLUTE     
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\Sumadora (SUMADORA)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        SUMADORA
+  C:0100H         SYMBOL        MAIN
+  C:0123H         SYMBOL        OVERFLOW
+  D:0090H         SYMBOL        P1
+  D:00A0H         SYMBOL        P2
+  D:00B0H         SYMBOL        P3
+  C:011FH         SYMBOL        TABLA
+  D:0030H         SYMBOL        VARIABLE1
+  D:0032H         SYMBOL        VARIABLE2
+  C:0000H         LINE#         2
+  C:0100H         LINE#         12
+  C:0102H         LINE#         13
+  C:0104H         LINE#         14
+  C:0107H         LINE#         15
+  C:0109H         LINE#         16
+  C:010BH         LINE#         17
+  C:010DH         LINE#         18
+  C:010FH         LINE#         19
+  C:0111H         LINE#         20
+  C:0113H         LINE#         21
+  C:0115H         LINE#         22
+  C:0117H         LINE#         23
+  C:011AH         LINE#         24
+  C:011BH         LINE#         25
+  C:011DH         LINE#         27
+  C:0123H         LINE#         36
+  C:0126H         LINE#         37
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  03/20/2019  12:43:55  PAGE 2
+
+
+  -------         ENDMOD        SUMADORA
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 002AH BYTE ( 2%) *
+******************************************************************************
+
+Program Size: data=12.0 xdata=0 code=42
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

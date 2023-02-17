@@ -1,0 +1,3 @@
+".\Objects\Comparar.obj" 
+TO ".\Objects\Comparar" 
+PRINT(".\Listings\Comparar.m51") RAMSIZE(256) 

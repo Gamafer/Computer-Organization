@@ -1,0 +1,97 @@
+A51 MACRO ASSEMBLER  PRACTICA1SEMAFORO                                                    02/06/2019 09:32:34 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\Practica1Semaforo.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE Practica1Semaforo.a51 SET(SMALL) DEBUG PRINT(.\Listings\Practica1Semafo
+                      ro.lst) OBJECT(.\Objects\Practica1Semaforo.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+----                   1     Dseg at 30h
+0030                   2             cont1: ds 1
+0031                   3             cont2: ds 1
+0032                   4             cont3: ds 1
+0033                   5             cont4: ds 1
+                       6     
+----                   7     Cseg at 00h
+0000 2100              8             jmp main
+                       9     
+----                  10     Cseg at 100h
+                      11     
+0100 753001           12     main: mov cont1,#1
+0103 75317F           13             mov cont2,#127
+0106 7532A9           14             mov cont3,#169
+0109 7533EC           15             mov cont4,#236
+                      16     
+010C 75900C           17     mov p1,#00001100B
+                      18     
+010F D533FD           19     label: DJNZ cont4,label
+0112 D532FA           20             DJNZ cont3,label
+0115 D531F7           21             DJNZ cont2,label
+0118 D530F4           22             DJNZ cont1,label
+                      23     
+011B 753001           24             mov cont1,#1
+011E 753114           25             mov cont2,#20
+0121 753200           26             mov cont3,#0
+0124 7533BB           27             mov cont4,#187
+                      28     
+0127 75900A           29             mov p1,#00001010B
+                      30     
+012A D533FD           31     et2: DJNZ cont4,et2
+012D D532FA           32             DJNZ cont3,et2
+0130 D531F7           33             DJNZ cont2,et2
+0133 D530F4           34             DJNZ cont1,et2
+                      35     
+0136 753001           36             mov cont1,#1
+0139 75317F           37             mov cont2,#127
+013C 7532A9           38             mov cont3,#169
+013F 7533EC           39             mov cont4,#236
+                      40     
+0142 759021           41             mov p1,#00100001B
+                      42     
+0145 D533FD           43     et3: DJNZ cont4,et3
+0148 D532FA           44             DJNZ cont3,et3
+014B D531F7           45             DJNZ cont2,et3
+014E D530F4           46             DJNZ cont1,et3
+                      47     
+0151 753001           48             mov cont1,#1
+0154 753114           49             mov cont2,#20
+0157 753200           50             mov cont3,#0
+015A 7533BB           51             mov cont4,#187
+                      52     
+015D 759011           53             mov p1,#00010001B
+                      54     
+0160 D533FD           55     et4: DJNZ cont4,et4
+0163 D532FA           56             DJNZ cont3,et4
+0166 D531F7           57             DJNZ cont2,et4
+A51 MACRO ASSEMBLER  PRACTICA1SEMAFORO                                                    02/06/2019 09:32:34 PAGE     2
+
+0169 D530F4           58             DJNZ cont1,et4
+                      59     
+016C 8092             60             JMP main
+                      61     END
+A51 MACRO ASSEMBLER  PRACTICA1SEMAFORO                                                    02/06/2019 09:32:34 PAGE     3
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+CONT1. . . . . . .  D ADDR   0030H   A   
+CONT2. . . . . . .  D ADDR   0031H   A   
+CONT3. . . . . . .  D ADDR   0032H   A   
+CONT4. . . . . . .  D ADDR   0033H   A   
+ET2. . . . . . . .  C ADDR   012AH   A   
+ET3. . . . . . . .  C ADDR   0145H   A   
+ET4. . . . . . . .  C ADDR   0160H   A   
+LABEL. . . . . . .  C ADDR   010FH   A   
+MAIN . . . . . . .  C ADDR   0100H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

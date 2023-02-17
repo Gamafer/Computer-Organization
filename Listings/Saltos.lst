@@ -1,0 +1,59 @@
+A51 MACRO ASSEMBLER  SALTOS                                                               02/13/2019 09:22:20 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\Saltos.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE Saltos.a51 SET(SMALL) DEBUG PRINT(.\Listings\Saltos.lst) OBJECT(.\Objec
+                      ts\Saltos.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+----                   1             CSEG AT 00
+0000 2100              2                     JMP main
+                       3             
+----                   4             Dseg at 30H
+0030                   5                     variable1: DS 1
+0031                   6                     cont1: DS 1
+0032                   7                     cont2: DS 1
+0033                   8                     cont3: DS 1
+                       9             
+----                  10             CSEG AT 100H
+                      11                     
+0100 E590             12             main: mov A, P1
+0102 F5B0             13                     mov P3, A
+0104 70FA             14                     JNZ main
+                      15                     
+0106 753109           16                     MOV cont1, #9
+0109 753208           17                     MOV cont2, #8
+010C 7533EC           18                     MOV cont3, #236
+                      19                     
+010F D533FD           20             otro: DJNZ cont3, otro
+0112 D532FA           21                     DJNZ cont2, otro
+0115 D531F7           22                     DJNZ cont1, otro
+                      23                     
+0118 80E6             24             jmp main
+                      25                     
+                      26                     
+                      27                     END
+A51 MACRO ASSEMBLER  SALTOS                                                               02/13/2019 09:22:20 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+CONT1. . . . . . .  D ADDR   0031H   A   
+CONT2. . . . . . .  D ADDR   0032H   A   
+CONT3. . . . . . .  D ADDR   0033H   A   
+MAIN . . . . . . .  C ADDR   0100H   A   
+OTRO . . . . . . .  C ADDR   010FH   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+P3 . . . . . . . .  D ADDR   00B0H   A   
+VARIABLE1. . . . .  D ADDR   0030H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

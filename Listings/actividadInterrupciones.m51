@@ -1,0 +1,74 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    04/05/2019  15:54:27  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\actividadInterrupciones.obj TO .\Objects\actividadInterrupciones PRINT (.\Listings
+>> \actividadInterrupciones.m51) RAMSIZE (256)
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\actividadInterrupciones.obj (ACTIVIDADINTERRUPCIONES)
+
+
+LINK MAP OF MODULE:  .\Objects\actividadInterrupciones (ACTIVIDADINTERRUPCIONES)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0002H     ABSOLUTE     
+                    0002H     0001H                  *** GAP ***
+            CODE    0003H     0003H     ABSOLUTE     
+                    0006H     000DH                  *** GAP ***
+            CODE    0013H     0003H     ABSOLUTE     
+                    0016H     000DH                  *** GAP ***
+            CODE    0023H     0007H     ABSOLUTE     
+                    002AH     00D6H                  *** GAP ***
+            CODE    0100H     000DH     ABSOLUTE     
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\actividadInterrupciones (ACTIVIDADINTERRUPCIONES)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ACTIVIDADINTERRUPCIONES
+  B:00A8H.7       SYMBOL        EA
+  D:00A8H         SYMBOL        IE
+  D:00B8H         SYMBOL        IP
+  C:0100H         SYMBOL        MAIN
+  D:0090H         SYMBOL        P1
+  B:0098H.0       SYMBOL        RI
+  C:010BH         SYMBOL        SALTO
+  D:0088H         SYMBOL        TCON
+  B:0098H.1       SYMBOL        TI
+  C:0000H         LINE#         2
+  C:0003H         LINE#         5
+  C:0005H         LINE#         6
+  C:0013H         LINE#         9
+  C:0015H         LINE#         10
+  C:0023H         LINE#         13
+  C:0025H         LINE#         14
+  C:0027H         LINE#         15
+  C:0029H         LINE#         16
+  C:0100H         LINE#         21
+  C:0103H         LINE#         22
+  C:0106H         LINE#         23
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  04/05/2019  15:54:27  PAGE 2
+
+
+  C:0109H         LINE#         24
+  C:010BH         LINE#         26
+  -------         ENDMOD        ACTIVIDADINTERRUPCIONES
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 001CH BYTE ( 1%) *
+******************************************************************************
+
+Program Size: data=8.0 xdata=0 code=28
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
